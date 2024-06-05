@@ -1,6 +1,7 @@
-from scapy.all import sniff
+from scapy.all import sniff, IP, TCP
 
 def packet_callback(packet):
-    print(packet.show())
+    if packet.haslayer(IP):
+        print(f"Source IP: {packet[IP].src} -> Destination IP: {packet[IP].dst}")
 
-sniff(prn=packet_callback, count=10)  # Adjust count to the number of packets you want to capture
+sniff(prn=packet_callback, filter="ip", store=False)
