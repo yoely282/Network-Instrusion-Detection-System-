@@ -1,0 +1,6 @@
+from scapy.all import sniff
+
+def packet_callback(packet):
+    print(packet.show())
+
+sniff(prn=packet_callback, count=10)  # Adjust count to the number of packets you want to capture
