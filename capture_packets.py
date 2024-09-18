@@ -23,7 +23,7 @@ def send_alert(email_content):
     try:
         # Create SMTP connection with SSL
         smtp_conn = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        smtp_conn.login('yoely282@gmail.com', 'Yesuafura12')  # Replace with your Gmail address and password or app password
+        smtp_conn.login('yoely282@gmail.com', 'APPPASSOWRD')  # Replace with your Gmail address and password or app password
 
         smtp_conn.sendmail('yoely282@gmail.com', 'fafifafi295@gmail.com', msg.as_string())
         print("Email sent successfully!")
