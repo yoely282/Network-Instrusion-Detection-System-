@@ -10,11 +10,11 @@ ip_counts = defaultdict(int)
 def send_alert(email_content):
     msg = MIMEText(email_content)
     msg['Subject'] = 'Intrusion Alert'
-    msg['From'] = 'yoely282@gmail.com'  # Replace with your Gmail address
-    msg['To'] = 'fafifafi295@gmail.com'  # Replace with the recipient's email address
+    msg['From'] = 'gmail.com'  # Replace with your Gmail address
+    msg['To'] = 'gmail.com'  # Replace with the recipient's email address
 
     # Path to your OAuth credentials JSON file
-    credentials_file = '/Users/yoelyoel/Desktop/client_secret_371925334536-q5voup7db0p95c9dmjar9jmeb8vkigcq.apps.googleusercontent.com.json'
+    credentials_file = '/ path of the file '
 
     # Create credentials object from JSON file
     credentials = service_account.Credentials.from_service_account_file(credentials_file,
@@ -23,7 +23,7 @@ def send_alert(email_content):
     try:
         # Create SMTP connection with SSL
         smtp_conn = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        smtp_conn.login('yoely282@gmail.com', 'APPPASSOWRD')  # Replace with your Gmail address and password or app password
+        smtp_conn.login('email enga kutu ', 'inna pas waga ')  # Replace with your Gmail address and password or app password
 
         smtp_conn.sendmail('yoely282@gmail.com', 'fafifafi295@gmail.com', msg.as_string())
         print("Email sent successfully!")
