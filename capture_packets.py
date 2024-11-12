@@ -25,7 +25,7 @@ def send_alert(email_content):
         smtp_conn = smtplib.SMTP_SSL('smtp.gmail.com', 465)
         smtp_conn.login('email enga kutu ', 'inna pas waga ')  # Replace with your Gmail address and password or app password
 
-        smtp_conn.sendmail('yoely282@gmail.com', 'fafifafi295@gmail.com', msg.as_string())
+        smtp_conn.sendmail('email ekkena ', 'email abarma ', msg.as_string())
         print("Email sent successfully!")
         smtp_conn.quit()
     except Exception as e:
