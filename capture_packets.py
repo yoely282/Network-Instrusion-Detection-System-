@@ -12,7 +12,7 @@ def send_alert(email_content):
     msg['Subject'] = 'Intrusion Alert'
     msg['From'] = 'gmail.com'  # Replace with your Gmail address
     msg['To'] = 'gmail.com'  # Replace with the recipient's email address
-
+                       
     # Path to your OAuth credentials JSON file
     credentials_file = '/ path of the file '
 
