@@ -6,20 +6,20 @@ from collections import defaultdict
                                                                                                                                      
 # Global dictionary to keep track of IP counts
 ip_counts = defaultdict(int)
-                                                                                                                 
+                                                                                                                                             
 def send_alert(email_content):
     msg = MIMEText(email_content)
     msg['Subject'] = 'Intrusion Alert'
     msg['From'] = 'gmail.com'  # Replace with your Gmail address
     msg['To'] = 'gmail.com'  # Replace with the recipient's email address
-                       
+                                                                                            
     # Path to your OAuth credentials JSON file
     credentials_file = '/ path of the file '
 
     # Create credentials object from JSON file
     credentials = service_account.Credentials.from_service_account_file(credentials_file,
                                                                         scopes=['https://mail.google.com/'])
-
+                                                                
     try:
         # Create SMTP connection with SSL
         smtp_conn = smtplib.SMTP_SSL('smtp.gmail.com', 465)
