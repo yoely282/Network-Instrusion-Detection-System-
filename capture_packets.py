@@ -5,7 +5,7 @@ from scapy.all import sniff, TCP, IP
 from collections import defaultdict
                                                                                                                                      
 # Global dictionary to keep track of IP counts
-ip_counts = defaultdict(int)
+ip_counts = defaultdict(int)                                                                     
                                                                                                                                                                              
 def send_alert(email_content):
     msg = MIMEText(email_content)
