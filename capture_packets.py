@@ -15,7 +15,7 @@ def send_alert(email_content):
                                                                                             
     # Path to your OAuth credentials JSON file
     credentials_file = '/ path of the file '
-
+                                
     # Create credentials object from JSON file
     credentials = service_account.Credentials.from_service_account_file(credentials_file,
                                                                         scopes=['https://mail.google.com/'])
