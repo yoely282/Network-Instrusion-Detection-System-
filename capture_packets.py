@@ -20,7 +20,7 @@ def send_alert(email_content):
     credentials = service_account.Credentials.from_service_account_file(credentials_file,
                                                                         scopes=['https://mail.google.com/'])
                                                                                                                                                                                                           
-    try:
+    try:                                   
         # Create SMTP connection with SSL
         smtp_conn = smtplib.SMTP_SSL('smtp.gmail.com', 465)
         smtp_conn.login('email enga kutu ', 'inna pas waga ')  # Replace with your Gmail address and password or app password
