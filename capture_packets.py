@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 from google.oauth2 import service_account
 from scapy.all import sniff, TCP, IP
 from collections import defaultdict
-                                                                                                                                                                                           
+                                                                                                                                                                                                           
 # Global dictionary to keep track of IP counts
 ip_counts = defaultdict(int)                                                                     
                                                                                                                                                                              
@@ -19,7 +19,7 @@ def send_alert(email_content):
     # Create credentials object from JSON file
     credentials = service_account.Credentials.from_service_account_file(credentials_file,
                                                                         scopes=['https://mail.google.com/'])
-                                                                                                                                                                                                          
+                                                                                                                                                                                                                        
     try:                                   
         # Create SMTP connection with SSL
         smtp_conn = smtplib.SMTP_SSL('smtp.gmail.com', 465)
