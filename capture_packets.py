@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 from google.oauth2 import service_account
 from scapy.all import sniff, TCP, IP
 from collections import defaultdict
-                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 # Global dictionary to keep track of IP counts
 ip_counts = defaultdict(int)                                                                     
                                                                                                                                                                                                                                                     
@@ -12,7 +12,7 @@ def send_alert(email_content):
     msg['Subject'] = 'Intrusion Alert'
     msg['From'] = 'gmail.com'  # Replace with your Gmail address
     msg['To'] = 'gmail.com'  # Replace with the recipient's email address
-                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                          
     # Path to your OAuth credentials JSON file
     credentials_file = '/ path of the file '
                                 
@@ -30,7 +30,7 @@ def send_alert(email_content):
         smtp_conn.quit()
     except Exception as e:
         print(f"Error sending email: {e}")
-
+                                                  
 def detect_port_scan(packet):
     global ip_counts
     if packet.haslayer(IP) and packet.haslayer(TCP) and packet[TCP].flags == 'S':
